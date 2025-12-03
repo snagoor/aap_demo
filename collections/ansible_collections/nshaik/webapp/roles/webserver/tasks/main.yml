@@ -25,3 +25,4 @@
   ansible.builtin.set_stats:
     data:
       web_nodes: "{{ groups['all'] }}"
+  run_once: true
