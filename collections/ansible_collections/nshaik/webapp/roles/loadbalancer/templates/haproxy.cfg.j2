@@ -27,7 +27,7 @@ backend web_servers
     mode http
     balance roundrobin
     # Configure the web servers dynamically from the 'web_nodes' group
-{% for host in groups['web_nodes'] %}
+{% for host in web_nodes %}
     # We assume 'ansible_host' is defined in your inventory for the web node IP.
     # If not, you may need to rely on the discovery of the IP, e.g., using 'ansible_default_ipv4.address'
     server {{ host }} {{ hostvars[host]['ansible_host'] }}:80 check
