@@ -1,0 +1,5 @@
+- name: Deploy Load Balancer (HAProxy)
+  hosts: all
+  become: true
+  roles:
+    - nshaik.webapp.loadbalancer

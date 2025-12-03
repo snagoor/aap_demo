@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Server Response</title>
+<style>
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f4f7f6;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+text-align: center;
+}
+.container {
+padding: 40px 60px;
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+h1 {
+color: #2c3e50;
+font-size: 2.5em;
+margin-bottom: 10px;
+}
+p {
+color: #34495e;
+font-size: 1.2em;
+border-top: 1px solid #ecf0f1;
+padding-top: 20px;
+}
+.node-id {
+color: #e74c3c;
+font-weight: bold;
+font-size: 1.5em;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Welcome to the Web Application!</h1>
+<p>This request was successfully served by:</p>
+<p class="node-id">{{ ansible_hostname | upper }}</p>
+<p>HAProxy is correctly routing traffic.</p>
+</div>
+</body>
+</html>
