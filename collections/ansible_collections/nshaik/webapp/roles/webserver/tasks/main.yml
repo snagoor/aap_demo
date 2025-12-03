@@ -20,3 +20,9 @@
 - name: Define handler to restart haproxy
   ansible.builtin.meta:
     flush_handlers
+
+- name: Set webserver hostnames as a global fact for the load balancer play
+  ansible.builtin.set_stats:
+    data:
+      web_nodes: "{{ groups['all'] }}"
+  run_once: true
